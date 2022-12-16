@@ -1650,6 +1650,11 @@ input, textarea {
   border: 3px solid #e0dbed;
   border-radius: 50%;
 }
+@media (max-width: 1400px) and (min-width: 1200px) {
+  .form-default-checkbox-checkmark {
+    right: 0.75rem;
+  }
+}
 .form-default-checkbox-checkmark.left {
   right: unset;
   left: 0;
@@ -2100,4 +2105,46 @@ input, textarea {
     padding-left: 15px;
     padding-right: 15px;
   }
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */er-selection-item-remove a {
+    right: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .order-selection-item-remove a {
+    right: 1rem;
+  }
+}
+
+.order-selection-item-remove a:hover {
+  background-color: #ff7000;
+}
+
+::selection {
+  color: #fff;
+  background: #512bcd;
+}
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1430px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .header .container {
+    max-width: 1550px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (min-width: 1900px) {
+  .header .container {
+    max-width: 1700px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
