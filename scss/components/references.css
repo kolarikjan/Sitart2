@@ -1,0 +1,13 @@
+.references {
+  background-image: url("../img/section-references-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.references-section {
+  padding-top: 6.5rem;
+}
+.references-image {
+  background-color: #ece9f1;
+  padding: 1.6rem 1.6rem 0 1.6rem;
+  border-radius: 10px;
+}/*# sourceMappingURL=references.css.map */

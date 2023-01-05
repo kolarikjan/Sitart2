@@ -1,0 +1,71 @@
+.button-purple {
+    @include flexCenter();
+    border-radius: $button-radius;
+    border: 2px solid $highlight-color;
+    color: $secondary-color;
+    background-color: $highlight-color;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.25s;
+    padding: 0.7rem 1.5rem;
+    @include widthFit();
+    svg {
+        margin-left: 1rem;
+        path {
+            fill: $secondary-color;
+        }
+    }
+    &:hover {
+        background-color: transparent;
+        color: $highlight-color;
+        text-decoration: none;
+        svg, path {
+            fill: $highlight-color !important;
+        }
+    }
+}
+.button-purple.arrow {
+    background-image: url("../img/arrow-right-white.png");
+    background-repeat: no-repeat;
+    background-position: right 1.5rem center;
+    padding: 0.85rem 3.25rem 0.85rem 1.75rem;
+}
+.button-purple.arrow:hover {
+    background-image: url("../img/arrow-right-purple.png");
+}
+.button-orange {
+    @include flexCenter();
+    border-radius: $button-radius;
+    border: 2px solid $highlight-color2;
+    color: $secondary-color;
+    background-color: $highlight-color2;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.25s;
+    padding: 0.7rem 1.5rem;
+    @include widthFit();
+    svg {
+        margin-left: 1rem;
+        path {
+            fill: $secondary-color;
+        }
+    }
+    &:hover {
+        background-color: $secondary-color;
+        color: $highlight-color2;
+        text-decoration: none;
+        svg, path {
+            fill: $highlight-color2 !important;
+        }
+        box-shadow: inset 10em 0 0 0 $secondary-color;
+    }
+}
+.button-orange.arrow {
+    background-image: url("../img/arrow-right-white.png");
+    background-repeat: no-repeat;
+    background-position: right 1.5rem center;
+    padding: 0.85rem 3.25rem 0.85rem 1.75rem;
+}
+.button-orange.arrow:hover {
+    background-image: url("../img/arrow-right-orange.png");
+}

@@ -1,0 +1,35 @@
+.references {
+    background-image: url("../img/section-references-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    &-content {
+        margin-bottom: -1.4rem;
+    }
+    &-section {
+        padding-top: 6.5rem;
+        .row > div {
+            margin-bottom: 1.4rem;
+        }
+    }
+    &-image {
+        background-color: #ece9f1;
+        padding: 1.6rem 1.6rem 0 1.6rem;
+        border-radius: 10px 10px 0 0;
+    }
+    &-description {
+        background-color: $secondary-color;
+        border-radius: 0 0 10px 10px;
+        padding: 2rem 1.6rem;
+        filter: drop-shadow(0.367px -20.997px 31px rgba(75,52,153,0.04));
+        a {
+            margin-bottom: 0;
+            color: $primary-color;
+            font-size: 17px;
+            transition-duration: 0.15s;
+            &:hover {
+                color: $highlight-color2;
+                text-decoration: none;
+            }
+        }
+    }
+}

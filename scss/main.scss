@@ -1,0 +1,35 @@
+// Defaults
+@import "defaults/variables.scss";
+@import "defaults/resets.scss";
+@import "defaults/functions.scss";
+
+// Components
+@import "components/header.scss";
+@import "components/buttons.scss";
+@import "components/banners.scss";
+@import "components/sections.scss";
+@import "components/about.scss";
+@import "components/references.scss";
+@import "components/numbers.scss";
+@import "components/reviews.scss";
+@import "components/footer.scss";
+
+// Style 
+@media (min-width: map-get($breaks, "xxl")) {
+    .container {
+        max-width: 1430px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .container-split-left {
+        max-width: 775px;
+        margin-left: auto;
+        margin-right: 0;
+    }
+}
+.dropdown-hover:hover .dropdown-hover-menu {
+    display: block !important;
+}
+.dropdown-hover:hover > a {
+    color: var(--highlight-color) !important;
+}
