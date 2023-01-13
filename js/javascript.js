@@ -9,14 +9,16 @@ const checkVisible = (elm) => {
 
 const numbersAnimation = () => {
     
-    const counters = document.querySelectorAll('.numbers-col-number');
+    const counters = document.querySelectorAll('.numbers-number span');
     let speed = 500;
 
     counters.forEach( counter => {
     const animate = () => {
         const value = +counter.getAttribute('data-value');
-        if (value < 100) {
-            speed = 500;
+        if (value < 50) {
+            speed = 1000;
+        } else if (value < 100) {
+            speed = 95;
         } else if (value < 200) {
             speed = 75;
         } else {
@@ -55,26 +57,6 @@ $(document).ready(function () {
         
         $(this).closest(".popup-content").css("display", "none");
         
-    });
-
-    $('.banner-homepage').owlCarousel({
-        items:1,
-        loop:true,
-        rewind:true,
-        navText:["<img src='img/arrow-banner.png' alt='slider arrow' class='banner-prev'>","<img src='img/arrow-banner.png' alt='slider arrow' class='banner-next'>"],
-        margin:1,
-        nav:true,
-        dots:true
-    });
-
-    $('.section-block-textimage').owlCarousel({
-        items:1,
-        loop:false,
-        rewind:true,
-        navText:["<img src='img/arrow-dropdown-black.png' alt='slider arrow' class='section-block-textimage-prev'>","<img src='img/arrow-dropdown-black.png' alt='slider arrow' class='section-block-textimage-next'>"],
-        margin:1,
-        nav:true,
-        dots:true
     });
 
     let owlreviews = $('.owl-reviews').owlCarousel({
@@ -120,11 +102,22 @@ $(document).ready(function () {
         $(".header-message").addClass("d-none");
     });
 
+    
 });
 var run = false;
+$(document).ready(function () {
+    if ($('.numbers-box').length) {
+        if (checkVisible(document.querySelector('.numbers-box')) && !run) {
+            run = true;
+            setTimeout(function(){
+            numbersAnimation();
+            }, );
+        }
+    }
+});
 $(window).scroll(function () { 
-    if ($('.numbers-col-text').length) {
-        if (checkVisible(document.querySelector('.numbers-col-text')) && !run) {
+    if ($('.numbers-box').length) {
+        if (checkVisible(document.querySelector('.numbers-box')) && !run) {
             run = true;
             setTimeout(function(){
             numbersAnimation();
