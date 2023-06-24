@@ -1,24 +1,39 @@
 .about {
+    &-content {
+        @include media("lg") {
+            margin-top: 2.25rem;
+        }
+    }
     &-icons {
         margin-top: 3.5rem;
-        margin-bottom: -1.25rem;
+        margin-bottom: -1.75rem;
+        @include media("xl") {
+            margin-top: 2.25rem;
+        }
         h3 {
             font-size: 24px;
             color: $primary-color;
             line-height: 33px;
             font-weight: bold;
             margin-bottom: 2rem;
+            @include media("md") {
+                text-align: center;
+            }
         }
         &-box {
             display: flex;
             align-items: center;
-            margin-bottom: 1.25rem;
+            margin-bottom: 1.75rem;
+            @include media("sm") {
+                flex-direction: column;
+                justify-content: center;
+            }
         }
         &-description {
             font-weight: 600;
             color: $primary-color;
             font-size: 19px;
-            line-height: 33px;
+            line-height: 28px;
             margin-bottom: 0;
         }
         &-image {
@@ -26,6 +41,12 @@
             display: flex;
             justify-content: center;
             margin-right: 1rem;
+            @include media("md") {
+                margin-bottom: .5rem;
+            }
+            @include media("sm") {
+                margin-right: 0;
+            }
             svg, img {
                 max-width: 50px;
                 max-height: 50px;
@@ -41,5 +62,14 @@
     }
     &-footer {
         margin-top: 5rem;
+        @include media("xl") {
+            margin-top: 2.25rem;
+        }
+        @include media("md") {
+            a {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
     }
 }

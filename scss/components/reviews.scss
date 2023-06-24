@@ -1,5 +1,9 @@
 .reviews {
     &-left {
+        @include media("md") {
+            margin-bottom: 4.5rem;
+            text-align: center;
+        }
         p {
             font-size: 19px;
             line-height: 29px;
@@ -9,6 +13,10 @@
     &-nav {
         display: flex;
         margin-top: 2.25rem;
+        @include media("md") {
+            margin-top: 1.5rem;
+            justify-content: center;
+        }
         &-prev {
             transform: rotate(180deg);
             margin-right: .5rem;

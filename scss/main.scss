@@ -13,23 +13,31 @@
 @import "components/numbers.scss";
 @import "components/reviews.scss";
 @import "components/footer.scss";
+@import "components/form.scss";
 
 // Style 
+::selection {
+    color: $secondary-color;
+    background: $highlight-color; 
+}
 @media (min-width: map-get($breaks, "xxl")) {
     .container {
         max-width: 1430px;
         padding-left: 15px;
         padding-right: 15px;
     }
-    .container-split-left {
-        max-width: 775px;
-        margin-left: auto;
-        margin-right: 0;
+}
+@media (min-width: 1600px) {
+    .header .container {
+        max-width: 1550px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
-.dropdown-hover:hover .dropdown-hover-menu {
-    display: block !important;
-}
-.dropdown-hover:hover > a {
-    color: var(--highlight-color) !important;
+@media (min-width: 1900px) {
+    .header .container {
+        max-width: 1700px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }

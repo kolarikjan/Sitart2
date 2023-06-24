@@ -2,6 +2,9 @@
     background-image: url("../img/section-references-background.png");
     background-repeat: no-repeat;
     background-size: cover;
+    @include media("md") {
+        background-position: center;
+    }
     &-content {
         margin-bottom: -1.4rem;
     }
@@ -11,16 +14,27 @@
             margin-bottom: 1.4rem;
         }
     }
+    &-box {
+        background-color: $secondary-color;
+        border-radius: 0 0 10px 10px;
+        height: 100%;
+    }
     &-image {
         background-color: #ece9f1;
         padding: 1.6rem 1.6rem 0 1.6rem;
         border-radius: 10px 10px 0 0;
+        img {
+            margin: 0 auto;
+            display: block;
+            max-height: 400px;
+        }
     }
     &-description {
-        background-color: $secondary-color;
-        border-radius: 0 0 10px 10px;
         padding: 2rem 1.6rem;
         filter: drop-shadow(0.367px -20.997px 31px rgba(75,52,153,0.04));
+        @include media("md") {
+            text-align: center;
+        }
         a {
             margin-bottom: 0;
             color: $primary-color;

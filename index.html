@@ -34,16 +34,8 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="#">Šablony</a>
                         </li>
-                        <li class="nav-item dropdown-hover">
+                        <li class="nav-item">
                             <a class="nav-link" href="#">Administrace</a>
-                            <div class="dropdown-hover-menu">
-                                <div class="position-relative d-flex flex-column">
-                                    <a class="dropdown-hover-item" href="#">Odkaz 1</a>
-                                    <a class="dropdown-hover-item" href="#">Odkaz 2</a>
-                                    <a class="dropdown-hover-item" href="#">Odkaz 3</a>
-                                    <a class="dropdown-hover-item" href="#">Odkaz 4</a>
-                                </div>
-                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Reference</a>
@@ -68,13 +60,14 @@
                                 <a href="#">
                                     +420 123 456 789
                                 </a>
+                                <span>|</span>
                                 <a href="#">
                                     info@sitart.cz
                                 </a>
                             </div>
                         </li>
                         <li class="nav-item header-button d-lg-none">
-                            <a href="#">
+                            <a href="#" class="button-purple button-icon-left">
                                 <svg 
  xmlns="http://www.w3.org/2000/svg"
  xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -87,7 +80,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="header-contact d-none d-lg-block">
+                <div class="header-contact d-none d-lg-flex align-items-center">
                     <div class="header-contact-icon">
                         <svg 
  xmlns="http://www.w3.org/2000/svg"
@@ -101,13 +94,14 @@
                         <a href="#">
                             +420 123 456 789
                         </a>
+                        <span>|</span>
                         <a href="#">
                             info@sitart.cz
                         </a>
                     </div>
                 </div>
-                <div class="header-button">
-                    <a href="#">
+                <div class="header-button d-none d-lg-block">
+                    <a href="#" class="button-purple button-icon-left ms-4">
                         <svg 
  xmlns="http://www.w3.org/2000/svg"
  xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -125,19 +119,17 @@
     <div class="banner">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-6 col-xl-5 p-0 order-2 order-lg-1">
+                <div class="col-12 col-lg-6 col-xl-5 order-2 order-lg-1">
                     <div class="banner-text">
-                        <div class="container container-split-left">
-                            <h1>Tvoříme <span>moderní a dostupné</span> webové stránky</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore ratione volup.</p>
-                            <a href="#" class="button-purple arrow">
-                                Prohlédnout reference
-                            </a>
-                        </div>
+                        <h1>Tvoříme <span>moderní a dostupné</span> webové stránky</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore ratione volup.</p>
+                        <a href="#" class="button-purple arrow">
+                            Prohlédnout reference
+                        </a>
                     </div>
                 </div>
                 <div class="col-12 col-lg-6 col-xl-7 p-0 order-1 order-lg-2">
-                    <div class="banner-image">
+                    <div class="banner-image d-none d-lg-block">
                         <img src="img/section-banner-image.png" alt="banner" class="img-fluid banner-images-item">
                     </div>
                 </div>
@@ -158,8 +150,8 @@
             <div class="section-content">
                 <div class="row">
                     <div class="col-12 col-lg-6">
-                        <div class="about-image">
-                            <img src="img/section-about-image.png" alt="banner" class="img-fluid banner-images-item">
+                        <div class="about-image pe-lg-4">
+                            <img src="img/section-about-image.png" alt="banner" class="img-fluid banner-images-item ms-auto ms-lg-0 me-auto me-lg-0">
                         </div>
                     </div>
                     <div class="col-12 col-lg-6">
@@ -255,7 +247,7 @@
         </div>
     </div>
 
-    <div class="references section p-0">
+    <div class="references section pt-md-0 pb-0">
         <div class="container">
             <div class="numbers section pt-0">
                 <div class="section-header section-header-center">
@@ -264,7 +256,7 @@
                     </div>
                 </div>
                 <div class="section-content">
-                    <div class="row">
+                    <div class="row justify-content-center">
                         <div class="col-12 col-sm-6 col-md-4">
                             <div class="numbers-box">
                                 <div class="numbers-number">
@@ -310,34 +302,52 @@
                 <div class="section-content">
                     <div class="references-content">
                         <div class="row">
-                            <div class="col-12 col-sm-6 col-md-4">
-                                <div class="references-image">
-                                    <a href="#">
-                                        <img src="img/section-references-image1.png" alt="banner" class="img-fluid banner-images-item">
-                                    </a>
-                                </div>
-                                <div class="references-description">
-                                    <a href="#"><b>Rivalfloor</b> - průmyslové podlahy</a>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4">
-                                <div class="references-image">
-                                    <a href="#">
-                                        <img src="img/section-references-image2.png" alt="banner" class="img-fluid banner-images-item">
-                                    </a>
-                                </div>
-                                <div class="references-description">
-                                    <a href="#"><b>Rivalfloor</b> - průmyslové podlahy</a>
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="references-box">
+                                    <div class="references-image">
+                                        <a href="#">
+                                            <img src="img/section-references-image1.png" alt="banner" class="img-fluid banner-images-item">
+                                        </a>
+                                    </div>
+                                    <div class="references-description">
+                                        <a href="#"><b>Rivalfloor</b> - průmyslové podlahy</a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-md-4">
-                                <div class="references-image">
-                                    <a href="#">
-                                        <img src="img/section-references-image3.png" alt="banner" class="img-fluid banner-images-item">
-                                    </a>
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="references-box">
+                                    <div class="references-image">
+                                        <a href="#">
+                                            <img src="img/section-references-image2.png" alt="banner" class="img-fluid banner-images-item">
+                                        </a>
+                                    </div>
+                                    <div class="references-description">
+                                        <a href="#"><b>Rivalfloor</b> - průmyslové podlahy</a>
+                                    </div>
                                 </div>
-                                <div class="references-description">
-                                    <a href="#"><b>Rivalfloor</b> - průmyslové podlahy</a>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="references-box">
+                                    <div class="references-image">
+                                        <a href="#">
+                                            <img src="img/section-references-image3.png" alt="banner" class="img-fluid banner-images-item">
+                                        </a>
+                                    </div>
+                                    <div class="references-description">
+                                        <a href="#"><b>Rivalfloor</b> - průmyslové podlahy</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-4 d-none d-sm-block d-lg-none">
+                                <div class="references-box">
+                                    <div class="references-image">
+                                        <a href="#">
+                                            <img src="img/section-references-image1.png" alt="banner" class="img-fluid banner-images-item">
+                                        </a>
+                                    </div>
+                                    <div class="references-description">
+                                        <a href="#"><b>Rivalfloor</b> - průmyslové podlahy</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -361,7 +371,7 @@
                             <h2>Řekli o nás</h2>
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore ratione volup.</p>
-                        <div class="reviews-nav">
+                        <div class="reviews-nav d-none d-md-flex">
                             <img src="img/arrow-banner.png" alt="banner" class="reviews-nav-prev">
                             <img src="img/arrow-banner.png" alt="banner" class="reviews-nav-next">
                         </div>
@@ -406,6 +416,10 @@
                             </div>
                         </div>
                     </div>
+                    <div class="reviews-nav d-md-none">
+                        <img src="img/arrow-banner.png" alt="banner" class="reviews-nav-prev">
+                        <img src="img/arrow-banner.png" alt="banner" class="reviews-nav-next">
+                    </div>
                 </div>
             </div>
         </div>
@@ -415,10 +429,14 @@
         <div class="position-relative">
             <div class="container">
                 <div class="footer-content">
-                    <div class="footer-extended">
                         <div class="row">
+                            <div class="col-12">
+                                <a href="" class="footer-logo">
+                                    <img src="img/logo.png" alt="logo">
+                                </a>
+                            </div>
                             <div class="col-12 col-xl-2">
-                                <div class="footer-menu ps-xl-5">
+                                <div class="footer-menu">
                                     <ul>
                                         <li>
                                             <a href="#">
@@ -448,7 +466,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-12 col-xl-3">
+                            <div class="col-12 col-md-6 col-xl-3">
                                 <div class="footer-address">
                                     <div class="footer-address-pin">
                                         <p>MACHIN.CZ s.r.o.</p>
@@ -463,10 +481,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-lg-6 col-xl-3">
+                            <div class="col-12 col-md-6 col-xl-3">
                                 <div class="footer-socials">
                                     <h3>Sledujte nás</h3>
-                                    <div>
+                                    <div class="d-flex flex-wrap justify-content-center justify-content-md-start pe-lg-2">
                                         <a href="#">
                                             <img src="img/icon-youtube-white.png" alt="youtube">
                                         </a>
@@ -485,17 +503,18 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-xl-4">
+                            <div class="col-12 col-md-8 col-lg-6 col-xl-4">
                                 <div class="footer-newsletter">
                                     <h3>Newsletter</h3>
-                                    <p>Máte zájem o zasílání novinek?</p>
-                                    <form class="footer-newsletter-form">
+                                    <div class="section-custom-content">
+                                        <p>Máte zájem o zasílání novinek?</p>
+                                    </div>
+                                    <form class="footer-newsletter-form form-custom pt-md-3">
                                         <input type="text" name="email" placeholder="Zadejte emailovou adresu">
-                                        <input type="submit" value="Přihlásit">
+                                        <input type="submit" value="Přihlásit" class="button-purple">
                                     </form>
                                 </div>
                             </div>
-                        </div>
                         </div>
                         <div class="copyright">
                             <p>COPYRIGHT © 2023 SITART.cz  |  TVORBA WWW STRÁNEK <a href="https://machin.cz/" target="_blank">SITART.CZ</a></p>

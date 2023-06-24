@@ -1,7 +1,7 @@
 .section {
     padding: 8rem 0 8rem;
     @include media("md") {
-        padding: 0 0 0;
+        padding: 3rem 0 3rem;
     }
     &-secondary {
         background-color: var(--background-secondary-color);
@@ -13,6 +13,12 @@
             margin-right: auto;
         }
         margin-bottom: 5rem;
+        @include media("lg") {
+            margin-bottom: 3.75rem;
+        }
+        @include media("md") {
+            margin-bottom: 2.25rem;
+        }
     }
     &-title {
         @include media("md") {
@@ -44,11 +50,15 @@
             color: $highlight-color;
         }
         @include media("md") {
+            font-size: 40px;
             text-align: center;
             margin-bottom: 1.75rem !important;
         }
     }
     &-custom-content {
+        @include media("md") {
+            text-align: center;
+        }
         p {
             color: $tertiary-color;
             font-size: 18px;

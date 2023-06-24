@@ -23,6 +23,12 @@
             fill: $highlight-color !important;
         }
     }
+    &.button-icon-left {
+        svg {
+            margin-left: 0;
+            margin-right: 1rem;
+        }
+    }
 }
 .button-purple.arrow {
     background-image: url("../img/arrow-right-white.png");
