@@ -10,14 +10,12 @@
     }
     &-section {
         padding-top: 6.5rem;
-        .row > div {
-            margin-bottom: 1.4rem;
-        }
     }
     &-box {
         background-color: $secondary-color;
-        border-radius: 0 0 10px 10px;
-        height: 100%;
+        border-radius: 10px;
+        height: calc(100% - 1.4rem);
+        margin-bottom: 1.4rem;
     }
     &-image {
         background-color: #ece9f1;
@@ -44,6 +42,12 @@
                 color: $highlight-color2;
                 text-decoration: none;
             }
+        }
+    }
+    &-more {
+        margin-top: 6rem;
+        @include media("md") {
+            margin-top: 3rem;
         }
     }
 }

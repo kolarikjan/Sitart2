@@ -1,145 +1,15 @@
-.section-subpage {
-    &:not(.section-subpage-margin) > *:first-child {
-        margin-top: 0 !important;
-    }
-    & > p:last-child, & > ul:last-child, &:not(&-heading) > h2:last-child, &:not(&-heading) > h3:last-child, &:not(&-heading) > h4:last-child, &:not(&-heading) > h5:last-child {
-        margin-bottom: 0 !important;
-    }
-    h1 {
-        font-size: 47px;
-        letter-spacing: -0.025rem;
-        margin-top: 3rem;
-        margin-bottom: 1.75rem;
-        font-weight: 600;
-        color: var(--primary-color);
-        text-transform: initial;
+.subpage {
+    &-title {
+        padding: 5.25rem 0;
         @include media("md") {
-            font-size: 44px;
+            padding: 4rem 0;
         }
     }
-    h2 {
-        font-size: 42px;
-        letter-spacing: -0.025rem;
-        margin-top: 2.75rem;
-        margin-bottom: 1.5rem;
-        font-weight: 600;
-        color: var(--primary-color);
-        text-transform: initial;
-        @include media("md") {
-            font-size: 39px;
+    &-content {
+        & > * {
+            padding-top: 0;
+            margin-top: 0;
         }
-    }
-    h3 {
-        font-size: 37px;
-        letter-spacing: -0.025rem;
-        margin-top: 2.5rem;
-        margin-bottom: 1.5rem;
-        font-weight: 600;
-        color: var(--primary-color);
-        text-transform: initial;
-        @include media("md") {
-            font-size: 34px;
-        }
-    }
-    h4 {
-        font-size: 31px;
-        letter-spacing: -0.025rem;
-        margin-top: 2.5rem;
-        margin-bottom: 1.25rem;
-        font-weight: 600;
-        color: var(--primary-color);
-        text-transform: initial;
-        @include media("md") {
-            font-size: 28px;
-        }
-    }
-    h5 {
-        font-size: 26px;
-        letter-spacing: -0.025rem;
-        margin-top: 2rem;
-        margin-bottom: 1.25rem;
-        font-weight: 600;
-        color: var(--primary-color);
-        text-transform: initial;
-        @include media("md") {
-            font-size: 23px;
-        }
-    }
-    p, li, td {
-        font-size: 17px;
-        line-height: 30px;
-        color: var(--paragraph-color);
-    }
-    &-heading {
-        h3, h2 {
-            margin-bottom: 2.25rem !important;
-            @include media("md") {
-                margin-bottom: 1.75rem !important;
-            }
-        }
-    }
-    ul {
-        padding: .5rem 0 0 0;
-        margin-left: 1rem;
-        margin-bottom: 1.5rem;
-        li {
-            list-style: none;
-            display: flex;
-            text-align: left;
-            &::before {
-                content: "";
-                flex-shrink: 0;
-                background-color: var(--highlight-color);
-                width: 13px;
-                height: 3px;
-                display: block;
-                margin-top: 14px;
-                margin-right: .5rem;
-            }
-        }
-    }
-    ol {
-        padding-left: 1.25rem;
-        margin: 0 0 1rem 1rem;
-        li {
-            &::marker {
-                font-weight: 500;
-            }
-        }
-    }
-    table {
-        width: 100%;
-        overflow-y: scroll;
-        @include media("md") {
-            text-align: center;
-        }
-        tbody {
-            tr:first-child {
-                background-color: var(--table-header-color) !important;
-                th {
-                    padding: 1.25rem 1.5rem;
-                    font-size: 17px;
-                    color: var(--secondary-color);
-                    font-weight: 500;
-                }
-            }
-        }
-        tr {
-            td {
-                padding: 1rem 1.5rem;
-                border: 1px solid var(--border-color);
-                background-color: var(--background-color);
-            }
-            &:nth-child(even) {
-                background-color: var(--table-color);
-            }
-            &:not(:last-child) td {
-                border-bottom: 0 !important;
-            }
-        }
-    }
-    @include media("md") {
-        text-align: center;
     }
 }
 .section-form {

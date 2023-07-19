@@ -1,4 +1,5 @@
 .about {
+    background-color: $secondary-color;
     &-content {
         @include media("lg") {
             margin-top: 2.25rem;
