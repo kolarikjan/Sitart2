@@ -71,10 +71,11 @@
         }
     }
     &-nav {
-        padding: 1.5rem 0;
-        @include media("xxl") {
+        padding: 0;
+        @media (max-width: 1400px) {
             flex-wrap: wrap;
             @include flexCenter();
+            padding: 2rem 0;
         }
         @include media("lg") {
             justify-content: space-between;
@@ -85,6 +86,9 @@
         .navbar-nav {
             margin: 0 auto;
             flex-wrap: wrap;
+            @media (max-width: 1400px) and (min-width: 993px) {
+                margin-bottom: .5rem;
+            }
             @include min-media("xl") {
                 padding: 0 1rem;
             }
@@ -92,49 +96,130 @@
                 & > .nav-item {
                     border-top: 1px solid var(--border-color);
                 }
+                .dropdown-hover > a {
+                    display: flex;
+                    &::after {
+                        margin-left: auto;
+                    }
+                }
             }
         }
         .nav-item {
+            &.dropdown-hover { 
+                &:hover .dropdown-hover-menu  {
+                    display: block !important;
+                }
+                & > a::after {
+                    background-image: url("../img/arrow-dropdown-black.png");
+                    background-repeat: no-repeat;
+                    background-position: right center;
+                    content: "";
+                    padding-left: 1.25rem;
+                }
+            }
+            .dropdown-hover {
+                position: relative;
+                &-menu {
+                    position: absolute;
+                    display: none;
+                    z-index: 1000;
+                    margin-left: 1rem;
+                    padding-top: .5rem;
+                    @include media("lg") {
+                        margin-left: 0;
+                        margin-bottom: .65rem;
+                        padding-top: .65rem;
+                        border-top: 1px solid $border-color;
+                    }
+                    & > div {
+                        padding: 1.5rem 1.75rem;
+                        background-color: $secondary-color;   
+                        border: 1px solid $border-color;
+                        border-radius: $button-radius;
+                        @include media("lg") {
+                            padding: 0 1rem;
+                            border: 0;
+                            svg {
+                                display: none;
+                            }
+                        }
+                    }
+                    @include media("lg") {
+                        position: unset;
+                        text-align: center;
+                    }
+                }    
+                &-item {
+                    color: $primary-color;
+                    transition-duration: 0.15s;
+                    font-size: 18px;
+                    line-height: 32px;
+                    font-weight: 600;
+                    display: flex;
+                    align-items: center;
+                    min-width: 275px;
+                    svg {
+                        fill: $highlight-color;
+                        path {
+                            fill: $highlight-color;
+                        }
+                        margin-right: .75rem;
+                    }
+                    &:hover {
+                        color: $highlight-color;
+                        text-decoration: none;
+                    }
+                    @include media("lg") {
+                        line-height: 30px;
+                        font-weight: 400;
+                        font-size: 15px;
+                        min-width: unset;
+                    }
+                }     
+            }
             .nav-link {
                 color: $primary-color;
                 font-size: 18px;
                 font-weight: 600;
-                padding: 0.75rem 1.125rem;
+                padding: .75rem 1.125rem;
                 text-decoration: none;
                 position: relative;
+                @media (min-width: 1401px) {
+                    padding: 2.25rem 1.125rem;
+                }
                 @include media("lg") {
                     margin-right: 0;
                     padding: 0.65rem 1rem;
                     font-size: 15px;
                 }
-                &::before{
+                &::before {
                     content: "";
                     width: calc(100% - 1.5rem);
                     height: 3px;
                     position: absolute;
                     left: .75rem;
                     right: .75rem;
-                    bottom: .25rem;
+                    bottom: 0;
                     background: $highlight-color;
                     transition: 0.5s transform ease;
                     transform: scale3d(0,1,1);
                     transform-origin: 0 50%;
                 }
-                @include min-media("lg") {
-                    &:hover::before{
-                        transform: scale3d(1,1,1);
-                    }
-                }
             }
             &.active .nav-link, .nav-link:hover {
                 color: $highlight-color;
+            }
+            @include min-media("lg") {
+                &.active .nav-link::before, .nav-link:hover::before {
+                    transform: scale3d(1,1,1);
+                }
             }
             @include media("md") {
                 width: 100%;
                 margin: 0 auto;
             }
         }
-        @include media("xxl") {
+        @media (max-width: 1400px) {
             padding-left: 0rem;
             padding: 0.75rem 0;
             width: 100%;
@@ -145,9 +230,13 @@
         }
     }
     &-button {
+        a {
+            padding: 0.7rem 2rem !important;
+        }
         @include media("lg") {
             border-top: 0 !important;
             padding-top: 1rem;
+            padding-left: 1rem;
         }
     }
     &-contact {
@@ -155,6 +244,7 @@
         display: flex;
         @include media("lg") {
             padding-top: 1rem;
+            padding-left: 1rem;
         }
         &-icon {
             border: 2px solid $highlight-color;
@@ -170,6 +260,15 @@
         &-content {
             display: flex;
             align-items: center;
+            @include media("xxl") {
+                flex-direction: column;
+                span {
+                    display: none;
+                }
+                a {
+                    line-height: 18px;
+                }
+            }
         }
         span {
             font-weight: 500;

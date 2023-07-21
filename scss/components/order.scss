@@ -1,0 +1,59 @@
+.order {
+    &-buttons {
+        margin-bottom: 4rem;
+        @include media("xl") {
+            margin-bottom: 2.5rem;
+        }
+        ul {
+            list-style: none;
+            margin: 0 0 -0.5rem;
+            padding: 0;
+            @include flexCenter();
+            flex-wrap: wrap;
+            li {
+                margin: 0 .25rem .5rem;
+                a {
+                    min-width: 260px;
+                }
+            }
+        }
+    }
+    &-selection {
+        & > div:not(:last-child) {
+            margin-bottom: 4rem;
+            @include media("md") {
+                margin-bottom: 2rem;
+            }
+        }
+        &-item {
+            &-remove {
+                position: relative; 
+                @include media("xl") {
+                    position: unset;
+                }
+                a {
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                    right: 0;
+                    height: 22px;
+                    width: 22px;
+                    background-color: $highlight-color;
+                    border-radius: 50%;
+                    @include flexCenter();
+                    cursor: pointer;
+                    transition-duration: 0.15s;
+                    @include media("xl") {
+                        right: 1.5rem;
+                    }
+                    @include media("sm") {
+                        right: 1rem;
+                    }
+                    &:hover {
+                        background-color: $highlight-color2;
+                    }
+                }
+            }
+        }
+    }
+}

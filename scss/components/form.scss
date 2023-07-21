@@ -1,7 +1,7 @@
 .form-custom {
-    input:not([type="submit"]), select, textarea {
+    input:not([type="submit"]):not([type="checkbox"]), select, textarea {
         border: 1px solid $border-color;
-        border-radius: 7px;
+        border-radius: $button-radius;
         color: $tertiary-color;
         font-size: 16px;
         line-height: 33px;
@@ -32,7 +32,7 @@
         }
     }
 }
-.form-contact {
+.form-default {
     .form-custom {
         background-color: $secondary-color;
         border-radius: $button-radius;
@@ -42,10 +42,188 @@
             padding: 2.5rem 2rem 1.5rem;
         }
     }
+    &-dropdown {
+        padding: 3.5rem 3rem !important;
+        @include media("sm") {
+            padding: 2.5rem 2rem !important;
+        }
+        &:not(.non-active)  &-header-arrow svg {
+            transform: rotateX(180deg);
+        }
+        &.non-active &-body {
+            max-height: 0 !important;
+        }
+        &-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            h4 {
+                color: $highlight-color;
+            }
+            &-arrow {
+                border-radius: $button-radius;
+                border: 2px solid $highlight-color;
+                width: 50px;
+                aspect-ratio: 1/1;
+                @include flexCenter();
+                svg {
+                    transition-duration: 0.3s;
+                }
+            }
+        }
+        &-body {
+            transition: .15s all;
+            overflow: hidden;
+            &-inner {
+                padding-top: 1.5rem;
+            }
+        }
+        .form-default-multipleSelect:last-child {
+            margin-bottom: 0 !important;
+        }
+    }
     &-title {
         margin-bottom: 4.5rem;
         @include media("md") {
             margin-bottom: 2rem;
+        }
+    }
+    &-checkboxDropdowns {
+        &-item {
+            padding: 1rem 0 0;
+            &-content {
+                padding-top: 1.5rem;
+                display: none;
+            }
+        }
+    }
+    &-total {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 1.5rem 3rem !important;
+        margin-top: -1.5rem;
+        @include media("md") {
+            padding: 1.5rem 2rem !important;
+            margin-top: 0;
+        }
+        &-text {
+            color: $primary-color;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+        &-price {
+            color: $highlight-color;
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+    }
+    &-multipleSelect {
+        border: 1px solid $border-color;
+        border-radius: $button-radius;
+        padding: .5rem 1.5rem;
+        min-height: 60px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-bottom: .5rem;
+        p {
+            margin-bottom: 0;
+        }
+        &-title {
+            color: $primary-color;
+            font-size: 18px;
+            font-weight: 700;
+            span {
+                font-weight: 400;
+                @include media("md") {
+                    display: block;
+                }
+            }
+        }
+        &-price {
+            color: $primary-color;
+            font-size: 26px;
+            font-weight: 700;
+        }
+        &-includedInPrice {
+            color: $primary-color;
+            font-size: 18px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            @include media("xl") {
+                margin-top: .25rem;
+            }
+            @include media("sm") {
+                font-weight: 400;
+            }
+            span {
+                background-color: $highlight-color2;
+                border-radius: 50%;
+                @include flexCenter();
+                width: 22px;
+                height: 22px;
+                margin-right: .5rem;
+                flex-shrink: 0;
+            }
+        }
+        &-includedInPrice {
+            display: flex;
+            svg {
+                flex-shrink: 0;
+            }
+        }
+        @include media("xl") {
+            position: relative;
+            padding: 1rem 3.5rem 1rem 1.5rem;
+            .form-default-checkbox {
+                position: unset;
+                span {
+                    right: 1.5rem;
+                }
+            }
+        }
+        @include media("sm") {
+            padding: 1rem 3.5rem 1rem 1rem;
+            .form-default-checkbox span {
+                right: 1rem;
+            }
+        }
+    }
+    &-checkbox {
+        display: block;
+        position: relative;
+        padding-left: 2rem;
+        cursor: pointer;
+        user-select: none;
+        input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+        &-checkmark {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            right: 0;
+            height: 22px;
+            width: 22px;
+            border: 3px solid $border-color;
+            border-radius: 50%;
+            &.left {
+                right: unset;
+                left: 0;
+            }
+        }
+        & input:checked ~ &-checkmark {
+            border: 7px solid $highlight-color;
         }
     }
     &-inputbox {
@@ -89,7 +267,7 @@
         }
         textarea {
             height: 100%;
-            min-height: 300px;
+            min-height: 200px;
         }
     }
     &-button {

@@ -1,0 +1,102 @@
+.themes {
+    &-menu {
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            @include media("lg") {
+                margin-bottom: 3rem;
+            }
+            li {
+                a {
+                    width: 100%;
+                    justify-content: flex-start;
+                    font-size: 17px;
+                    padding: 0.9rem 2rem;
+                }
+                &:not(:last-child) {
+                    margin-bottom: .75rem;
+                }
+            }
+        }
+    }
+    &-list {
+        padding-left: 7.5rem;
+        margin-bottom: -2.5rem;
+        @include media("xl") {
+            padding-left: 2.5rem;
+        }
+        @include media("lg") {
+            padding-left: 0;
+        }
+        @include min-media("xl") {
+            & > .row {
+                margin-left: -1.5rem;
+                margin-right: -1.5rem;
+                & > div {
+                    padding-left: 1.5rem;
+                    padding-right: 1.5rem;
+                }
+            }
+        }
+        &-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            padding-bottom: 2.5rem;
+            &-tag {
+                margin-bottom: 1rem;
+                span {
+                    display: block;
+                    background-color: $secondary-color;
+                    font-size: 17px;
+                    font-weight: 600;
+                    color: $primary-color;
+                    padding: .5rem 2rem;
+                    @include widthFit();
+                    border-radius: $button-radius;
+                }
+            }
+            &-image {
+                background-color: #ece9f1;
+                padding: 1.6rem;
+                border-radius: 10px;
+                img {
+                    margin: 0 auto;
+                }
+            }
+            &-buttons {
+                margin-top: 2.25rem;
+                @include media("lg") {
+                    margin-top: 1.5rem;
+                }
+                & > .row {
+                    margin-left: -0.25rem;
+                    margin-right: -0.25rem;
+                    & > div {
+                        padding-left: .25rem;
+                        padding-right: .25rem;
+                    }
+                }
+                a {
+                    font-size: 17px;
+                    font-weight: 400;
+                    width: 100%;
+                    padding: 0.9rem 1rem;
+                    svg {
+                        margin-right: .75rem !important;
+                    }
+                    @media (max-width: 1400px) {
+                        flex-direction: column;
+                        text-align: center;
+                        svg {
+                            margin-right: 0 !important;
+                            margin-bottom: .75rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

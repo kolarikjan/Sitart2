@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <!-- DEFAULTS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitart</title>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- STYLE -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/fancybox.css"> 
+    <link rel="stylesheet" href="scss/main.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="header">
+        <div class="container">
+            <nav class="header-nav navbar navbar-expand-lg navbar-light">
+                <a class="header-logo" href="#">
+                    <img src="img/logo.png" alt="logo" class="img-fluid">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="animated-icon"><span></span><span></span><span></span></div>
+                </button>
+                <div class="collapse navbar-collapse" id="nav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Šablony</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Administrace</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Reference</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Ceník</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Kontakt</a>
+                        </li>
+                        <li class="nav-item header-contact d-lg-none">
+                            <div class="header-contact-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22px" height="22px"><path fill-rule="evenodd"  fill="rgb(81, 43, 205)" d="M11.911,17.1000 L7.575,17.1000 L7.575,13.586 L17.398,3.586 L21.734,7.1000 L11.911,17.1000 ZM9.540,15.1000 L11.098,15.1000 L9.540,14.414 L9.540,15.1000 ZM10.929,13.000 L12.487,14.586 L18.956,7.1000 L17.398,6.414 L10.929,13.000 ZM12.487,4.1000 L2.664,4.1000 L2.664,15.1000 L5.611,15.1000 L5.611,17.1000 L2.664,17.1000 L2.664,19.1000 L12.487,19.1000 L12.487,17.1000 L14.451,17.1000 L14.451,19.1000 C14.451,21.102 13.570,22.000 12.487,22.000 L2.664,22.000 C1.581,22.000 0.699,21.102 0.699,19.1000 L0.699,17.1000 L0.699,15.1000 L0.699,2.000 C0.699,0.897 1.581,0.000 2.664,0.000 L12.487,0.000 C13.570,0.000 14.451,0.897 14.451,2.000 L14.451,5.1000 L12.487,5.1000 L12.487,4.1000 ZM12.487,2.000 L2.664,2.000 L2.664,3.000 L12.487,3.000 L12.487,2.000 Z"/></svg>
+                            </div>
+                            <div class="header-contact-content">
+                                <a href="#">
+                                    +420 123 456 789
+                                </a>
+                                <span>|</span>
+                                <a href="#">
+                                    info@sitart.cz
+                                </a>
+                            </div>
+                        </li>
+                        <li class="nav-item header-button d-lg-none">
+                            <a href="#" class="button-purple button-icon-left">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22px" height="22px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M12.185,22.000 L7.852,22.000 L7.852,17.586 L17.668,7.586 L22.001,12.000 L12.185,22.000 ZM9.815,19.1000 L11.372,19.1000 L9.815,18.414 L9.815,19.1000 ZM11.203,17.000 L12.760,18.586 L19.225,12.000 L17.668,10.414 L11.203,17.000 ZM13.742,2.000 L6.870,2.000 L6.870,7.000 L1.962,7.000 L1.962,19.1000 L5.889,19.1000 L5.889,22.000 L-0.001,22.000 L-0.001,4.586 L4.500,-0.000 L15.705,-0.000 L15.705,7.000 L13.742,7.000 L13.742,2.000 ZM4.907,2.414 L2.368,5.000 L4.907,5.000 L4.907,2.414 Z"/></svg>
+                                Objednat web
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header-contact d-none d-lg-flex align-items-center">
+                    <div class="header-contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22px" height="22px"><path fill-rule="evenodd"  fill="rgb(81, 43, 205)" d="M11.911,17.1000 L7.575,17.1000 L7.575,13.586 L17.398,3.586 L21.734,7.1000 L11.911,17.1000 ZM9.540,15.1000 L11.098,15.1000 L9.540,14.414 L9.540,15.1000 ZM10.929,13.000 L12.487,14.586 L18.956,7.1000 L17.398,6.414 L10.929,13.000 ZM12.487,4.1000 L2.664,4.1000 L2.664,15.1000 L5.611,15.1000 L5.611,17.1000 L2.664,17.1000 L2.664,19.1000 L12.487,19.1000 L12.487,17.1000 L14.451,17.1000 L14.451,19.1000 C14.451,21.102 13.570,22.000 12.487,22.000 L2.664,22.000 C1.581,22.000 0.699,21.102 0.699,19.1000 L0.699,17.1000 L0.699,15.1000 L0.699,2.000 C0.699,0.897 1.581,0.000 2.664,0.000 L12.487,0.000 C13.570,0.000 14.451,0.897 14.451,2.000 L14.451,5.1000 L12.487,5.1000 L12.487,4.1000 ZM12.487,2.000 L2.664,2.000 L2.664,3.000 L12.487,3.000 L12.487,2.000 Z"/></svg>
+                    </div>
+                    <div class="header-contact-content">
+                        <a href="#">
+                            +420 123 456 789
+                        </a>
+                        <span>|</span>
+                        <a href="#">
+                            info@sitart.cz
+                        </a>
+                    </div>
+                </div>
+                <div class="header-button d-none d-lg-block">
+                    <a href="#" class="button-purple button-icon-left ms-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22px" height="22px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M12.185,22.000 L7.852,22.000 L7.852,17.586 L17.668,7.586 L22.001,12.000 L12.185,22.000 ZM9.815,19.1000 L11.372,19.1000 L9.815,18.414 L9.815,19.1000 ZM11.203,17.000 L12.760,18.586 L19.225,12.000 L17.668,10.414 L11.203,17.000 ZM13.742,2.000 L6.870,2.000 L6.870,7.000 L1.962,7.000 L1.962,19.1000 L5.889,19.1000 L5.889,22.000 L-0.001,22.000 L-0.001,4.586 L4.500,-0.000 L15.705,-0.000 L15.705,7.000 L13.742,7.000 L13.742,2.000 ZM4.907,2.414 L2.368,5.000 L4.907,5.000 L4.907,2.414 Z"/></svg>
+                        Objednat web
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="subpage-title">
+        <div class="container">
+            <div class="section-custom-content">
+                <h1>Ceník</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="subpage-content">
+        <div class="order section">
+            <div class="container">
+                <div class="section-content">
+                    <div class="order-buttons">
+                        <ul>
+                            <li>
+                                <a href="#" class="button-purple button-hover-white-background">Vyberte rozsah služeb</a>
+                            </li>
+                            <li>
+                                <a href="#" class="button-white">Zadejte kontaktní údaje</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="form-default">
+                        <form action="" class="order-selection">
+                            <div class="form-custom form-default-inner form-default-dropdown">
+                                <div class="form-default-dropdown-header">
+                                    <div class="section-custom-content">
+                                        <h4 class="text-md-start">Šablonové www stránky</h4>
+                                    </div>
+                                    <div class="form-default-dropdown-header-arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="10px"><path fill-rule="evenodd"  fill="rgb(81, 43, 205)" d="M1.211,-0.008 C1.518,-0.008 1.825,0.106 2.059,0.335 L8.570,6.696 L14.979,0.437 C15.447,-0.021 16.206,-0.021 16.675,0.437 C17.143,0.894 17.143,1.636 16.675,2.093 L8.570,10.011 L0.363,1.992 C-0.106,1.535 -0.106,0.793 0.363,0.335 C0.597,0.106 0.904,-0.008 1.211,-0.008 Z"/></svg>
+                                    </div>
+                                </div>
+                                <div class="form-default-dropdown-body">
+                                    <div class="form-default-dropdown-body-inner">
+                                        <div class="form-default-multipleSelect">
+                                            <label class="w-100">
+                                                <div class="row align-items-center">
+                                                    <div class="col-12 col-xl-9">
+                                                        <p class="form-default-multipleSelect-title">
+                                                            Šablonový web
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-12 col-xl-3">
+                                                        <div class="row align-items-center">
+                                                            <div class="col-12 col-xl-8">
+                                                                <p class="form-default-multipleSelect-price">
+                                                                    9 990 Kč
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-12 col-xl-4">
+                                                                <div class="form-default-checkbox">
+                                                                    <input type="checkbox" checked="">
+                                                                    <span class="form-default-checkbox-checkmark"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="form-default-multipleSelect">
+                                            <label class="w-100">
+                                                <div class="row align-items-center">
+                                                    <div class="col-12 col-xl-9">
+                                                        <p class="form-default-multipleSelect-title">
+                                                            Samotná grafická šablona www stránek
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-12 col-xl-3">
+                                                        <div class="row align-items-center">
+                                                            <div class="col-12 col-xl-8">
+                                                                <p class="form-default-multipleSelect-includedInPrice">
+                                                                    <span>
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12px" height="9px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M4.755,8.1000 L1.049,4.950 C0.680,4.547 0.680,3.894 1.049,3.492 C1.417,3.089 2.014,3.089 2.383,3.492 L4.755,6.084 L9.913,0.449 C10.281,0.046 10.878,0.046 11.247,0.449 C11.616,0.851 11.616,1.505 11.247,1.907 L4.755,8.1000 Z"/></svg>
+                                                                    </span>
+                                                                    v ceně
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-12 col-xl-4">
+                                                                <div class="form-default-checkbox">
+                                                                    <input type="checkbox" checked="">
+                                                                    <span class="form-default-checkbox-checkmark"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="form-default-multipleSelect">
+                                            <label class="w-100">
+                                                <div class="row align-items-center">
+                                                    <div class="col-12 col-xl-9">
+                                                        <p class="form-default-multipleSelect-title">
+                                                            Redakční systém pro správu a aktualizaci obsahu
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-12 col-xl-3">
+                                                        <div class="row align-items-center">
+                                                            <div class="col-12 col-xl-8">
+                                                                <p class="form-default-multipleSelect-includedInPrice">
+                                                                    <span>
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12px" height="9px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M4.755,8.1000 L1.049,4.950 C0.680,4.547 0.680,3.894 1.049,3.492 C1.417,3.089 2.014,3.089 2.383,3.492 L4.755,6.084 L9.913,0.449 C10.281,0.046 10.878,0.046 11.247,0.449 C11.616,0.851 11.616,1.505 11.247,1.907 L4.755,8.1000 Z"/></svg>
+                                                                    </span>
+                                                                    v ceně
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-12 col-xl-4">
+                                                                <div class="form-default-checkbox">
+                                                                    <input type="checkbox" checked="">
+                                                                    <span class="form-default-checkbox-checkmark"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="form-default-multipleSelect">
+                                            <label class="w-100">
+                                                <div class="row align-items-center">
+                                                    <div class="col-12 col-xl-9">
+                                                        <p class="form-default-multipleSelect-title">
+                                                            Responzivní web (správné zobrazení na mobilních telefonech)
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-12 col-xl-3">
+                                                        <div class="row align-items-center">
+                                                            <div class="col-12 col-xl-8">
+                                                                <p class="form-default-multipleSelect-includedInPrice">
+                                                                    <span>
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12px" height="9px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M4.755,8.1000 L1.049,4.950 C0.680,4.547 0.680,3.894 1.049,3.492 C1.417,3.089 2.014,3.089 2.383,3.492 L4.755,6.084 L9.913,0.449 C10.281,0.046 10.878,0.046 11.247,0.449 C11.616,0.851 11.616,1.505 11.247,1.907 L4.755,8.1000 Z"/></svg>
+                                                                    </span>
+                                                                    v ceně
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-12 col-xl-4">
+                                                                <div class="form-default-checkbox">
+                                                                    <input type="checkbox" checked="">
+                                                                    <span class="form-default-checkbox-checkmark"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="form-default-multipleSelect">
+                                            <label class="w-100">
+                                                <div class="row align-items-center">
+                                                    <div class="col-12 col-xl-9">
+                                                        <p class="form-default-multipleSelect-title">
+                                                            SSL certifikát - zabezpečení webu
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-12 col-xl-3">
+                                                        <div class="row align-items-center">
+                                                            <div class="col-12 col-xl-8">
+                                                                <p class="form-default-multipleSelect-includedInPrice">
+                                                                    <span>
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12px" height="9px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M4.755,8.1000 L1.049,4.950 C0.680,4.547 0.680,3.894 1.049,3.492 C1.417,3.089 2.014,3.089 2.383,3.492 L4.755,6.084 L9.913,0.449 C10.281,0.046 10.878,0.046 11.247,0.449 C11.616,0.851 11.616,1.505 11.247,1.907 L4.755,8.1000 Z"/></svg>
+                                                                    </span>
+                                                                    v ceně
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-12 col-xl-4">
+                                                                <div class="form-default-checkbox">
+                                                                    <input type="checkbox" checked="">
+                                                                    <span class="form-default-checkbox-checkmark"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="form-default-multipleSelect">
+                                            <label class="w-100">
+                                                <div class="row align-items-center">
+                                                    <div class="col-12 col-xl-9">
+                                                        <p class="form-default-multipleSelect-title">
+                                                            Zprovoznění na serveru
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-12 col-xl-3">
+                                                        <div class="row align-items-center">
+                                                            <div class="col-12 col-xl-8">
+                                                                <p class="form-default-multipleSelect-includedInPrice">
+                                                                    <span>
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12px" height="9px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M4.755,8.1000 L1.049,4.950 C0.680,4.547 0.680,3.894 1.049,3.492 C1.417,3.089 2.014,3.089 2.383,3.492 L4.755,6.084 L9.913,0.449 C10.281,0.046 10.878,0.046 11.247,0.449 C11.616,0.851 11.616,1.505 11.247,1.907 L4.755,8.1000 Z"/></svg>
+                                                                    </span>
+                                                                    v ceně
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-12 col-xl-4">
+                                                                <div class="form-default-checkbox">
+                                                                    <input type="checkbox" checked="">
+                                                                    <span class="form-default-checkbox-checkmark"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="form-default-multipleSelect">
+                                            <label class="w-100">
+                                                <div class="row align-items-center">
+                                                    <div class="col-12 col-xl-9">
+                                                        <p class="form-default-multipleSelect-title">
+                                                            Zaškolení pracovníka tak, aby mohl aktualizovat stránky pomocí redakčního systému sám
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-12 col-xl-3">
+                                                        <div class="row align-items-center">
+                                                            <div class="col-12 col-xl-8">
+                                                                <p class="form-default-multipleSelect-includedInPrice">
+                                                                    <span>
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12px" height="9px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M4.755,8.1000 L1.049,4.950 C0.680,4.547 0.680,3.894 1.049,3.492 C1.417,3.089 2.014,3.089 2.383,3.492 L4.755,6.084 L9.913,0.449 C10.281,0.046 10.878,0.046 11.247,0.449 C11.616,0.851 11.616,1.505 11.247,1.907 L4.755,8.1000 Z"/></svg>
+                                                                    </span>
+                                                                    v ceně
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-12 col-xl-4">
+                                                                <div class="form-default-checkbox">
+                                                                    <input type="checkbox" checked="">
+                                                                    <span class="form-default-checkbox-checkmark"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="form-default-multipleSelect">
+                                            <label class="w-100">
+                                                <div class="row align-items-center">
+                                                    <div class="col-12 col-xl-9">
+                                                        <p class="form-default-multipleSelect-title">
+                                                            Registrace domény
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-12 col-xl-3">
+                                                        <div class="row align-items-center">
+                                                            <div class="col-12 col-xl-8">
+                                                                <p class="form-default-multipleSelect-includedInPrice">
+                                                                    <span>
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12px" height="9px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M4.755,8.1000 L1.049,4.950 C0.680,4.547 0.680,3.894 1.049,3.492 C1.417,3.089 2.014,3.089 2.383,3.492 L4.755,6.084 L9.913,0.449 C10.281,0.046 10.878,0.046 11.247,0.449 C11.616,0.851 11.616,1.505 11.247,1.907 L4.755,8.1000 Z"/></svg>
+                                                                    </span>
+                                                                    v ceně
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-12 col-xl-4">
+                                                                <div class="form-default-checkbox">
+                                                                    <input type="checkbox" checked="">
+                                                                    <span class="form-default-checkbox-checkmark"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="form-default-multipleSelect">
+                                            <label class="w-100">
+                                                <div class="row align-items-center">
+                                                    <div class="col-12 col-xl-9">
+                                                        <p class="form-default-multipleSelect-title">
+                                                            5 e-mailových adres cokoli@vasedomena.cz
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-12 col-xl-3">
+                                                        <div class="row align-items-center">
+                                                            <div class="col-12 col-xl-8">
+                                                                <p class="form-default-multipleSelect-includedInPrice">
+                                                                    <span>
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12px" height="9px"><path fill-rule="evenodd"  fill="rgb(255, 255, 255)" d="M4.755,8.1000 L1.049,4.950 C0.680,4.547 0.680,3.894 1.049,3.492 C1.417,3.089 2.014,3.089 2.383,3.492 L4.755,6.084 L9.913,0.449 C10.281,0.046 10.878,0.046 11.247,0.449 C11.616,0.851 11.616,1.505 11.247,1.907 L4.755,8.1000 Z"/></svg>
+                                                                    </span>
+                                                                    v ceně
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-12 col-xl-4">
+                                                                <div class="form-default-checkbox">
+                                                                    <input type="checkbox" checked="">
+                                                                    <span class="form-default-checkbox-checkmark"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-custom form-default-inner form-default-dropdown">
+                                <div class="form-default-dropdown-header">
+                                    <div class="section-custom-content">
+                                        <h4 class="text-md-start">Další služby k webu</h4>
+                                    </div>
+                                    <div class="form-default-dropdown-header-arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="10px"><path fill-rule="evenodd"  fill="rgb(81, 43, 205)" d="M1.211,-0.008 C1.518,-0.008 1.825,0.106 2.059,0.335 L8.570,6.696 L14.979,0.437 C15.447,-0.021 16.206,-0.021 16.675,0.437 C17.143,0.894 17.143,1.636 16.675,2.093 L8.570,10.011 L0.363,1.992 C-0.106,1.535 -0.106,0.793 0.363,0.335 C0.597,0.106 0.904,-0.008 1.211,-0.008 Z"/></svg>
+                                    </div>
+                                </div>
+                                <div class="form-default-dropdown-body">
+                                    <div class="form-default-dropdown-body-inner">
+                                        <div class="form-default-multipleSelect">
+                                            <label class="w-100">
+                                                <div class="row align-items-center">
+                                                    <div class="col-12 col-xl-9">
+                                                        <p class="form-default-multipleSelect-title">
+                                                            Jazyková mutace <span>/ Rozsah prací 1 hodina /</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-12 col-xl-3">
+                                                        <div class="row align-items-center">
+                                                            <div class="col-12 col-xl-8">
+                                                                <p class="form-default-multipleSelect-price">
+                                                                    9 990 Kč
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-12 col-xl-4">
+                                                                <div class="form-default-checkbox">
+                                                                    <input type="checkbox" checked="">
+                                                                    <span class="form-default-checkbox-checkmark"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="form-default-multipleSelect">
+                                            <label class="w-100">
+                                                <div class="row align-items-center">
+                                                    <div class="col-12 col-xl-9">
+                                                        <p class="form-default-multipleSelect-title">
+                                                            Katalog produktů <span>/ Rozsah prací 1 hodina /</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-12 col-xl-3">
+                                                        <div class="row align-items-center">
+                                                            <div class="col-12 col-xl-8">
+                                                                <p class="form-default-multipleSelect-price">
+                                                                    9 990 Kč
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-12 col-xl-4">
+                                                                <div class="form-default-checkbox">
+                                                                    <input type="checkbox">
+                                                                    <span class="form-default-checkbox-checkmark"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-custom form-default-inner form-default-dropdown">
+                                <div class="form-default-dropdown-header">
+                                    <div class="section-custom-content">
+                                        <h4 class="text-md-start">Další služby k webu</h4>
+                                    </div>
+                                    <div class="form-default-dropdown-header-arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="10px"><path fill-rule="evenodd"  fill="rgb(81, 43, 205)" d="M1.211,-0.008 C1.518,-0.008 1.825,0.106 2.059,0.335 L8.570,6.696 L14.979,0.437 C15.447,-0.021 16.206,-0.021 16.675,0.437 C17.143,0.894 17.143,1.636 16.675,2.093 L8.570,10.011 L0.363,1.992 C-0.106,1.535 -0.106,0.793 0.363,0.335 C0.597,0.106 0.904,-0.008 1.211,-0.008 Z"/></svg>
+                                    </div>
+                                </div>
+                                <div class="form-default-dropdown-body">
+                                    <div class="form-default-dropdown-body-inner">
+                                        <div class="form-default-multipleSelect">
+                                            <label class="w-100">
+                                                <div class="row align-items-center">
+                                                    <div class="col-12 col-xl-9">
+                                                        <p class="form-default-multipleSelect-title">
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-12 col-xl-3">
+                                                        <div class="row align-items-center">
+                                                            <div class="col-12 col-xl-8">
+                                                                <p class="form-default-multipleSelect-price">
+                                                                    9 990 Kč
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-12 col-xl-4">
+                                                                <div class="form-default-checkbox">
+                                                                    <input type="checkbox" checked="">
+                                                                    <span class="form-default-checkbox-checkmark"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="form-default-multipleSelect">
+                                            <label class="w-100">
+                                                <div class="row align-items-center">
+                                                    <div class="col-12 col-xl-9">
+                                                        <p class="form-default-multipleSelect-title">
+                                                            Qui magnam, nulla necessitatibus beatae ab nesciunt voluptatum.
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-12 col-xl-3">
+                                                        <div class="row align-items-center">
+                                                            <div class="col-12 col-xl-8">
+                                                                <p class="form-default-multipleSelect-price">
+                                                                    9 990 Kč
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-12 col-xl-4">
+                                                                <div class="form-default-checkbox">
+                                                                    <input type="checkbox">
+                                                                    <span class="form-default-checkbox-checkmark"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="mt-4 checkboxDropdowns">
+                                            <div class="form-default-checkboxDropdowns-item">
+                                                <label class="form-default-checkbox">
+                                                    <input type="checkbox">
+                                                    <span class="form-default-checkbox-checkmark left"></span>
+                                                    Mám zájem i o marketing
+                                                </label>
+                                            </div>
+                                            <div class="form-default-checkboxDropdowns-item">
+                                                <label class="form-default-checkbox form-default-checkboxDropdowns-item-click">
+                                                    <input type="checkbox">
+                                                    <span class="form-default-checkbox-checkmark left"></span>
+                                                    Mám zájem o něco jiného
+                                                </label>
+                                                <div class="form-default-checkboxDropdowns-item-content">
+                                                    <div class="form-default-inputbox pb-0">
+                                                        <label for="">Napište o co</label>
+                                                        <textarea></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-custom form-default-inner form-default-total">
+                                <p class="form-default-total-text">Cena celkem:</p>
+                                <p class="form-default-total-price">9 990 Kč</p>
+                            </div>
+
+                            <div>
+                                <button class="button-orange arrow ms-auto me-auto me-md-0">Další krok</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="position-relative">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="row">
+                        <div class="col-12">
+                            <a href="" class="footer-logo">
+                                <img src="img/logo.png" alt="logo">
+                            </a>
+                        </div>
+                        <div class="col-12 col-xl-2">
+                            <div class="footer-menu">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            Home 
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            O nás 
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Služby 
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Reference  
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            Kontakt 
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-3">
+                            <div class="footer-address">
+                                <div class="footer-address-pin">
+                                    <p>MACHIN.CZ s.r.o.</p>
+                                    <p>Tyršovo nám. 440</p>
+                                    <p>686 01 Uherské Hradiště</p>
+                                </div>
+                                <div class="footer-address-mail">
+                                    <a href="#">machin@machin.cz</a>
+                                </div>
+                                <div class="footer-address-tel">
+                                    <a href="#">+420 123 456 789</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-3">
+                            <div class="footer-socials">
+                                <h3>Sledujte nás</h3>
+                                <div class="d-flex flex-wrap justify-content-center justify-content-md-start pe-lg-2">
+                                    <a href="#">
+                                        <img src="img/icon-youtube-white.png" alt="youtube">
+                                    </a>
+                                    <a href="#">
+                                        <img src="img/icon-linkedin-white.png" alt="linkedin">
+                                    </a>
+                                    <a href="#">
+                                        <img src="img/icon-facebook-white.png" alt="facebook">
+                                    </a>
+                                    <a href="#">
+                                        <img src="img/icon-instagram-white.png" alt="instagram">
+                                    </a>
+                                    <a href="#">
+                                        <img src="img/icon-twitter-white.png" alt="twitter">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-8 col-lg-6 col-xl-4">
+                            <div class="footer-newsletter">
+                                <h3>Newsletter</h3>
+                                <div class="section-custom-content">
+                                    <p>Máte zájem o zasílání novinek?</p>
+                                </div>
+                                <form class="footer-newsletter-form form-custom pt-3">
+                                    <input type="text" name="email" placeholder="Zadejte emailovou adresu">
+                                    <input type="submit" value="Přihlásit" class="button-purple">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copyright">
+                        <p>COPYRIGHT © 2023 SITART.cz  |  TVORBA WWW STRÁNEK <a href="https://machin.cz/" target="_blank">SITART.CZ</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/fancybox.umd.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/javascript.js"></script>
+</body>
+</html>

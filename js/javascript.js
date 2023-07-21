@@ -41,9 +41,40 @@ const numbersAnimation = () => {
     });
 }
 
+const faqSection = () => {
+    
+    $(".form-default-dropdown-body").each(function (index, element) {
+        $(element).css("max-height", $(element).height());
+        $(element).closest(".form-default-dropdown").addClass("non-active");
+    });
+
+}
+
 $(document).ready(function () {
     
     Fancybox.bind("[data-fancybox]", {});
+
+    $(".form-default-checkboxDropdowns-item-click").click(function (e) { 
+        e.preventDefault();
+        let content = $(this).parent().children(".form-default-checkboxDropdowns-item-content");
+        let input = $(this).children("input");
+        if (input.prop("checked")) {
+            content.removeClass("d-block");
+            input.prop("checked", false);
+        }
+        else {
+            content.addClass("d-block");
+            input.prop("checked", true);
+        }
+    });
+
+    $(".form-default-dropdown-header").click(function (e) { 
+        if ($(this).parent().hasClass("non-active")) {
+            $(this).parent().removeClass("non-active");
+        }else {
+            $(this).parent().addClass("non-active");
+        }
+    });
 
     $(".popup-activator").click(function (e) {
 
