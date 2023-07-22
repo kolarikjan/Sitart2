@@ -1679,7 +1679,7 @@ input, textarea {
   height: 70px !important;
 }
 .form-default-inputbox input:not([type=submit]), .form-default-inputbox textarea, .form-default-inputbox select {
-  padding: 1.75rem 1.5rem 0.5rem 0.65rem;
+  padding: 1.75rem 1.5rem 0.5rem 0.65rem !important;
 }
 .form-default-inputbox-select {
   position: relative;
@@ -1701,6 +1701,7 @@ input, textarea {
   background-image: url("../img/arrow-dropdown-purple.png");
   background-repeat: no-repeat;
   background-position: right 1.5rem center;
+  cursor: pointer;
 }
 .form-default-inputbox textarea {
   height: 100%;
@@ -2105,46 +2106,4 @@ input, textarea {
     padding-left: 15px;
     padding-right: 15px;
   }
-}/*# sourceMappingURL=main.css.map */er-selection-item-remove a {
-    right: 1.5rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .order-selection-item-remove a {
-    right: 1rem;
-  }
-}
-
-.order-selection-item-remove a:hover {
-  background-color: #ff7000;
-}
-
-::selection {
-  color: #fff;
-  background: #512bcd;
-}
-
-@media (min-width: 1600px) {
-  .container {
-    max-width: 1430px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-
-@media (min-width: 1600px) {
-  .header .container {
-    max-width: 1550px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-
-@media (min-width: 1900px) {
-  .header .container {
-    max-width: 1700px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
+}/*# sourceMappingURL=main.css.map */
