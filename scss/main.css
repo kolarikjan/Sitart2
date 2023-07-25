@@ -1542,7 +1542,7 @@ input, textarea {
 .form-default-multipleSelect {
   border: 1px solid #e0dbed;
   border-radius: 7px;
-  padding: 0.5rem 1.5rem;
+  padding: 0.95rem 1.5rem;
   min-height: 60px;
   display: flex;
   align-items: center;
@@ -1565,9 +1565,18 @@ input, textarea {
     display: block;
   }
 }
+.form-default-multipleSelect-smallTitle {
+  line-height: 27px !important;
+}
+@media (max-width: 768px) {
+  .form-default-multipleSelect-smallTitle {
+    margin: 0.5rem 0 !important;
+  }
+}
 .form-default-multipleSelect-price {
   color: #000000;
   font-size: 26px;
+  line-height: 28px;
   font-weight: 700;
 }
 .form-default-multipleSelect-includedInPrice {
@@ -2032,7 +2041,7 @@ input, textarea {
   min-width: 260px;
 }
 .order-selection > div:not(:last-child) {
-  margin-bottom: 4rem;
+  margin-bottom: 3.25rem;
 }
 @media (max-width: 768px) {
   .order-selection > div:not(:last-child) {
@@ -2106,4 +2115,46 @@ input, textarea {
     padding-left: 15px;
     padding-right: 15px;
   }
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */der-selection-item-remove a {
+    right: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .order-selection-item-remove a {
+    right: 1rem;
+  }
+}
+
+.order-selection-item-remove a:hover {
+  background-color: #ff7000;
+}
+
+::selection {
+  color: #fff;
+  background: #512bcd;
+}
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1430px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .header .container {
+    max-width: 1550px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (min-width: 1900px) {
+  .header .container {
+    max-width: 1700px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

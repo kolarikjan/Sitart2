@@ -20,7 +20,7 @@
     }
     &-selection {
         & > div:not(:last-child) {
-            margin-bottom: 4rem;
+            margin-bottom: 3.25rem;
             @include media("md") {
                 margin-bottom: 2rem;
             }
