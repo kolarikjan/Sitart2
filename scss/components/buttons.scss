@@ -10,6 +10,7 @@
     padding: 0.9rem 2rem;
     @include widthFit();
     svg {
+        flex-shrink: 0;
         margin-left: 1rem;
         path {
             fill: $secondary-color;

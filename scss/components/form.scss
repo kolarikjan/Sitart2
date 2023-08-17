@@ -138,6 +138,7 @@
             color: $primary-color;
             font-size: 18px;
             font-weight: 700;
+            min-height: 29px;
             span {
                 font-weight: 400;
                 @include media("md") {
